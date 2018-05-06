@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E1C16043-ADC3-434E-88F1-2A393A8A182D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>rzrt</RootNamespace>
+    <ProjectName>renzoku</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)1</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir>$(SolutionDir)\dist</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>RZ_MORE_CHECK; WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./vc/3rdparty/qtbase/include;./vc/3rdparty/glew/include;./vc/3rdparty/freeglut/include;./vc/3rdparty/msinttypes/;./vc/3rdparty/openexr/include;./vc/3rdparty/freeimage/;./vc/3rdparty/boost/include;./vc/3rdparty/eigen;./vc/3rdparty/libjson;./vc/3rdparty/nvidia/;./vc/3rdparty/eigen/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Half.lib;Iex.lib;IlmImf.lib;IlmThread.lib;Imath.lib;zlibwapi.lib;freeimage.lib;opengl32.lib;glu32.lib;freeglut.lib;glew32.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./vc/3rdparty/glew/lib/win32;./vc/3rdparty/freeglut/lib;./vc/3rdparty/openexr/lib/win32;./vc/3rdparty/freeimage/win32;./vc/3rdparty/boost/lib/lib32-msvc-$(MSBuildToolsVersion);./vc/3rdparty/qtbase/build-win32/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(ProjectDir)\build_obj.bat $(ProjectDir)\$(Configuration) cornell_box.obj $(ProjectDir)\test\test_rzrt\rzrt.lib</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Gather all OBJs to make a static lib for testing</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>RZ_MORE_CHECK; WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./vc/3rdparty/qtbase/include;./vc/3rdparty/glew/include;./vc/3rdparty/freeglut/include;./vc/3rdparty/msinttypes/;./vc/3rdparty/openexr/include;./vc/3rdparty/freeimage/;./vc/3rdparty/boost/include;./vc/3rdparty/eigen;./vc/3rdparty/libjson;./vc/3rdparty/nvidia/;./vc/3rdparty/libimportance/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Half.lib;Iex.lib;IlmImf.lib;IlmThread.lib;Imath.lib;zlibwapi.lib;FreeImage.lib;opengl32.lib;glu32.lib;freeglut.lib;glew32.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;Qt5Widgets.lib;libimportance_debug.lib;wxbase29ud.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./vc/3rdparty/glew/lib/x64;./vc/3rdparty/freeglut/lib/x64;./vc/3rdparty/openexr/lib/x64;./vc/3rdparty/freeimage/x64;./vc/3rdparty/boost/lib/lib64-msvc-$(MSBuildToolsVersion);./vc/3rdparty/qtbase/build-x64/lib;./vc/3rdparty/libimportance/lib/x64-msvc-$(MSBuildToolsVersion);./vc/3rdparty/libimportance/lib/wxWidgets;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>RZ_MORE_CHECK; WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./vc/3rdparty/qtbase/include;./vc/3rdparty/glew/include;./vc/3rdparty/freeglut/include;./vc/3rdparty/msinttypes/;./vc/3rdparty/openexr/include;./vc/3rdparty/freeimage/;./vc/3rdparty/boost/include;./vc/3rdparty/eigen;./vc/3rdparty/libjson;./vc/3rdparty/nvidia/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>./vc/3rdparty/glew/lib/win32;./vc/3rdparty/freeglut/lib;./vc/3rdparty/openexr/lib/win32;./vc/3rdparty/freeimage/win32;./vc/3rdparty/boost/lib/lib32-msvc-$(MSBuildToolsVersion);./vc/3rdparty/qtbase/build-win32/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Half.lib;Iex.lib;IlmImf.lib;IlmThread.lib;Imath.lib;zlibwapi.lib;FreeImage.lib;opengl32.lib;glu32.lib;freeglut.lib;glew32.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>RZ_MORE_CHECK; WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./vc/3rdparty/qtbase/include;./vc/3rdparty/glew/include;./vc/3rdparty/freeglut/include;./vc/3rdparty/msinttypes/;./vc/3rdparty/openexr/include;./vc/3rdparty/freeimage/;./vc/3rdparty/boost/include;./vc/3rdparty/eigen;./vc/3rdparty/libjson;./vc/3rdparty/nvidia/;./vc/3rdparty/libimportance/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>./vc/3rdparty/glew/lib/x64;./vc/3rdparty/freeglut/lib/x64;./vc/3rdparty/openexr/lib/x64;./vc/3rdparty/freeimage/x64;./vc/3rdparty/qtbase/build-x64/lib;./vc/3rdparty/libimportance/lib/x64-msvc-$(MSBuildToolsVersion);./vc/3rdparty/libimportance/lib/wxWidgets;./vc/3rdparty/boost/lib/lib64-msvc-12.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Half.lib;Iex.lib;IlmImf.lib;IlmThread.lib;Imath.lib;zlibwapi.lib;FreeImage.lib;opengl32.lib;glu32.lib;freeglut.lib;glew32.lib;libimportance.lib;wxbase29u.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="aggregate.h" />
+    <ClInclude Include="area_light.h" />
+    <ClInclude Include="base_object.h" />
+    <ClInclude Include="aggregate_bvh.h" />
+    <ClInclude Include="boundingbox_n.h" />
+    <ClInclude Include="bsdf.h" />
+    <ClInclude Include="camera_view.h" />
+    <ClInclude Include="cluster_builder.h" />
+    <ClInclude Include="cone.h" />
+    <ClInclude Include="env_light.h" />
+    <ClInclude Include="form_factor.h" />
+    <ClInclude Include="gl_vertex.h" />
+    <ClInclude Include="gl_view.h" />
+    <ClInclude Include="integrator_scheduler.h" />
+    <ClInclude Include="json_parser.h" />
+    <ClInclude Include="kdtree_2.h" />
+    <ClInclude Include="kdtree_n.h" />
+    <ClInclude Include="lightslice.h" />
+    <ClInclude Include="light_transport_matrix.h" />
+    <ClInclude Include="local_geometry.h" />
+    <ClInclude Include="dir_light.h" />
+    <ClInclude Include="events.h" />
+    <ClInclude Include="frame.h" />
+    <ClInclude Include="glut_viewer.h" />
+    <ClInclude Include="linear.h" />
+    <ClInclude Include="marshal.h" />
+    <ClInclude Include="mis.h" />
+    <ClInclude Include="monte_carlo_integrator.h" />
+    <ClInclude Include="boundingbox.h" />
+    <ClInclude Include="brdf_point_light.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="cluster.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="lambertian.h" />
+    <ClInclude Include="error.h" />
+    <ClInclude Include="first_bounce.h" />
+    <ClInclude Include="glass.h" />
+    <ClInclude Include="hitrecord.h" />
+    <ClInclude Include="image_sampler.h" />
+    <ClInclude Include="image_block_view.h" />
+    <ClInclude Include="integrator.h" />
+    <ClInclude Include="json_importer.h" />
+    <ClInclude Include="light_particle.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="mat4.h" />
+    <ClInclude Include="math3.h" />
+    <ClInclude Include="matrix_c.h" />
+    <ClInclude Include="matrix_color.h" />
+    <ClInclude Include="mesh_view.h" />
+    <ClInclude Include="morton.h" />
+    <ClInclude Include="mrcs.h" />
+    <ClInclude Include="named_object.h" />
+    <ClInclude Include="noglut.h" />
+    <ClInclude Include="number.h" />
+    <ClInclude Include="object.h" />
+    <ClInclude Include="obj_importer.h" />
+    <ClInclude Include="obj_parser.h" />
+    <ClInclude Include="observable.h" />
+    <ClInclude Include="octree.h" />
+    <ClInclude Include="other\vorba\guiding_config.h" />
+    <ClInclude Include="other\vorba\photon_sampler.h" />
+    <ClInclude Include="param_dict.h" />
+    <ClInclude Include="path.h" />
+    <ClInclude Include="path_tracing.h" />
+    <ClInclude Include="pdf.h" />
+    <ClInclude Include="photon.h" />
+    <ClInclude Include="image.h" />
+    <ClInclude Include="kdtree.h" />
+    <ClInclude Include="light.h" />
+    <ClInclude Include="material.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="mirror.h" />
+    <ClInclude Include="mtwist.h" />
+    <ClInclude Include="onb.h" />
+    <ClInclude Include="phong.h" />
+    <ClInclude Include="photon_light.h" />
+    <ClInclude Include="point_light.h" />
+    <ClInclude Include="quad.h" />
+    <ClInclude Include="random.h" />
+    <ClInclude Include="ray.h" />
+    <ClInclude Include="render_config_importer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rgb.h" />
+    <ClInclude Include="sampler.h" />
+    <ClInclude Include="scene.h" />
+    <ClInclude Include="scene_importer.h" />
+    <ClInclude Include="sensor.h" />
+    <ClInclude Include="shading_geometry.h" />
+    <ClInclude Include="shape.h" />
+    <ClInclude Include="size.h" />
+    <ClInclude Include="sphere.h" />
+    <ClInclude Include="spot_light.h" />
+    <ClInclude Include="stats.h" />
+    <ClInclude Include="stratified_sampler.h" />
+    <ClInclude Include="surface.h" />
+    <ClInclude Include="texture.h" />
+    <ClInclude Include="textured_material.h" />
+    <ClInclude Include="thin_translucent.h" />
+    <ClInclude Include="thin_transparent.h" />
+    <ClInclude Include="thread_controller.h" />
+    <ClInclude Include="time.h" />
+    <ClInclude Include="tonemap.h" />
+    <ClInclude Include="trackball.h" />
+    <ClInclude Include="triangle.h" />
+    <ClInclude Include="vc\3rdparty\libjson\json.h" />
+    <ClInclude Include="vec2.h" />
+    <ClInclude Include="vec3.h" />
+    <ClInclude Include="view.h" />
+    <ClInclude Include="viewer.h" />
+    <ClInclude Include="vpl.h" />
+    <ClInclude Include="vpl_generator.h" />
+    <ClInclude Include="vpl_interface.h" />
+    <ClInclude Include="vpl_ppm.h" />
+    <ClInclude Include="ward.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aggregate.cc" />
+    <ClCompile Include="area_light.cc" />
+    <ClCompile Include="base_object.cc" />
+    <ClCompile Include="brdf_point_light.cc" />
+    <ClCompile Include="aggregate_bvh.cc" />
+    <ClCompile Include="camera.cc" />
+    <ClCompile Include="cluster_builder.cc" />
+    <ClCompile Include="cone.cc" />
+    <ClCompile Include="env_light.cc" />
+    <ClCompile Include="integrator_scheduler.cc" />
+    <ClCompile Include="json_parser.cc" />
+    <ClCompile Include="kdtree_2.cc" />
+    <ClCompile Include="lightslice.cc" />
+    <ClCompile Include="light_transport_matrix.cc" />
+    <ClCompile Include="path.cc" />
+    <ClCompile Include="path_tracing.cc" />
+    <ClCompile Include="render_config_importer.cc" />
+    <ClCompile Include="renzoku.cc" />
+    <ClCompile Include="lambertian.cc" />
+    <ClCompile Include="dir_light.cc" />
+    <ClCompile Include="error.cc" />
+    <ClCompile Include="first_bounce.cc" />
+    <ClCompile Include="frame.cc" />
+    <ClCompile Include="glass.cc" />
+    <ClCompile Include="glut_viewer.cc" />
+    <ClCompile Include="image_sampler.cc" />
+    <ClCompile Include="image_block_view.cc" />
+    <ClCompile Include="integrator.cc" />
+    <ClCompile Include="json_importer.cc" />
+    <ClCompile Include="kdtree.cc" />
+    <ClCompile Include="light_particle.cc" />
+    <ClCompile Include="linear.cc" />
+    <ClCompile Include="log.cc" />
+    <ClCompile Include="material.cc" />
+    <ClCompile Include="matrix.cc" />
+    <ClCompile Include="matrix_c.cc" />
+    <ClCompile Include="mesh_view.cc" />
+    <ClCompile Include="mirror.cc" />
+    <ClCompile Include="monte_carlo_integrator.cc" />
+    <ClCompile Include="mrcs.cc" />
+    <ClCompile Include="mtwist.c" />
+    <ClCompile Include="obj_importer.cc" />
+    <ClCompile Include="obj_parser.cpp" />
+    <ClCompile Include="octree.cc" />
+    <ClCompile Include="onb.cc" />
+    <ClCompile Include="param_dict.cc" />
+    <ClCompile Include="pdf.cc" />
+    <ClCompile Include="phong.cc" />
+    <ClCompile Include="photon_light.cc" />
+    <ClCompile Include="point_light.cc" />
+    <ClCompile Include="quad.cc" />
+    <ClCompile Include="resource.cc" />
+    <ClCompile Include="rgb.cc" />
+    <ClCompile Include="sampler.cc" />
+    <ClCompile Include="scene.cc" />
+    <ClCompile Include="sensor.cc" />
+    <ClCompile Include="shading_geometry.cc" />
+    <ClCompile Include="sphere.cc" />
+    <ClCompile Include="spot_light.cc" />
+    <ClCompile Include="stats.cc" />
+    <ClCompile Include="stratified_sampler.cc" />
+    <ClCompile Include="surface.cc" />
+    <ClCompile Include="texture.cc" />
+    <ClCompile Include="textured_material.cc" />
+    <ClCompile Include="thin_transparent.cc" />
+    <ClCompile Include="thread_controller.cc" />
+    <ClCompile Include="tonemap.cc" />
+    <ClCompile Include="trackball.c" />
+    <ClCompile Include="triangle.cc" />
+    <ClCompile Include="vc\3rdparty\libjson\json.c" />
+    <ClCompile Include="vec2.cc" />
+    <ClCompile Include="vec3.cc" />
+    <ClCompile Include="viewer.cc" />
+    <ClCompile Include="vpl.cc" />
+    <ClCompile Include="vpl_generator.cc" />
+    <ClCompile Include="vpl_ppm.cc" />
+    <ClCompile Include="ward.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc\rzrt_doc.tex" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
